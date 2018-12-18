@@ -16,15 +16,16 @@
 
 @import "semantic-ui";
 footer{
-    position: fixed;
     top: 90%;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #d0d0d0;
+    background-color: #99ffcc;
     border-top: 2px solid #000;
     min-width: 200px;
     padding: 10px;
+    position:fixed;
+    display: block;
 }
 td.InwzaTD{
     width: 100px;
