@@ -1,18 +1,19 @@
 <h1>Hello Rails!</h1>
-<p id="notice"><%= notice %></p>
+
+
 <% if current_user %>
+  <%= link_to "Log Out", logout_path ,class: "ui red button" %>
+  <%= current_user.email %>
 
-
-
-
-  <%= link_to "Log Out", logout_path ,class: "item" %>
-      <%= current_user.email %>
-
-
+    <% if current_user.roles == 'admin' %>
+      <p id="notice"><%= notice %>&nbsp; admin</p>
+    <% else %>
+      <p id="notice"><%= notice %> &nbsp;user</p>
+  <% end %>
 
 <% else %>
-  <%= link_to "Sign Up", signup_path %> or
-  <%= link_to "Log In", login_path %>
+  <%= link_to "Log In", login_path ,class: "ui green button"%>
 <% end %>
+
 
 <%= render 'layouts/footer' %>
