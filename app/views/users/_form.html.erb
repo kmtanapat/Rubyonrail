@@ -26,6 +26,11 @@
     <%= form.password_field :password_confirmation %>
   </div>
 
+  <div class="field">
+    <%= form.label :roles %>
+    <%= form.select :roles,['admin','user']%>
+  </div>
+
   <div class="actions">
     <%= form.submit 'Create User', class:"ui primary button"%>
   </div>

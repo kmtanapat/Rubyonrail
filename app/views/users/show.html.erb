@@ -5,6 +5,9 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-
+<p>
+  <strong>roles:</strong>
+  <%= @user.roles %>
+</p>
 <%= link_to 'Edit', edit_user_path(@user),class: "ui yellow button" %> |
 <%= link_to 'Back', users_path ,class: "ui green button"%>
