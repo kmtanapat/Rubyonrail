@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :req
+
 
   # GET /users
   # GET /users.json
@@ -71,4 +73,9 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation,:roles)
     end
+  def req
+    unless current_user
+      redirect_to login_path
+    end
+  end
 end
