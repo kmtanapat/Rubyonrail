@@ -13,8 +13,37 @@
     <div class="item">
       <% if current_user %>
 
-          <strong><%= current_user.email %></strong>
-        <%= link_to "Log Out", logout_path ,class: "ui red button"%>
+        <div class="ui inline dropdown">
+          <div class="text">
+            <img src="/image/umr.jpg"class="ui mini circular image">
+            <%= current_user.user_name %>
+          </div>
+          <i class="dropdown icon"></i>
+          <div class="menu">
+            <div class="item">
+              Elliot Fu
+            </div>
+            <div class="item">
+              Elliot Fu
+            </div>
+            <div class="item">
+              Elliot Fu
+            </div>
+            <div class="item">
+              Elliot Fu
+            </div><div class="item">
+            Elliot Fu
+          </div>
+
+
+          </div>
+        </div>
+
+
+
+        <%#= link_to current_user.user_name, edit_user_path(current_user.user_name) ,class: "ui yellow button"%>
+<!--        &nbsp;-->
+        <%#= link_to "Log Out", logout_path ,class: "ui red button"%>
       <% else %>
         <%= link_to "Log In", login_path, class: "ui green button" %>
       <% end %>

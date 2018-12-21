@@ -21,7 +21,7 @@
         <% if current_user.roles == 'admin' %>
         <td class="InwzaTD"><%= link_to 'Show', user ,class: "ui green button"%></td>
         <td class="InwzaTD"><%= link_to 'Edit', edit_user_path(user) ,class: "ui yellow button"%></td>
-        <td class="InwzaTD"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' },class: "ui red button" %></td>
+        <td class="InwzaTD"><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' },class: "ui red button" %></td>
           <td><%= user.user_name %></td>
           <td><%= user.roles %></td>
       </tr>

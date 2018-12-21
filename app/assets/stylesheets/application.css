@@ -15,6 +15,11 @@
  */
 
 @import "semantic-ui";
+body{
+    background-color: #ebebe0
+;
+
+}
 footer{
     top: 90%;
     left: 0;
