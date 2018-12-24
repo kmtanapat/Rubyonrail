@@ -1,39 +1,69 @@
-<p id="notice"><%= notice %></p>
+<%= render 'layouts/header' %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<h1>Details</h1>
+<table class="ui celled green table">
 
-<p>
-  <strong>Details:</strong>
-  <%= @product.details %>
-</p>
-
-<p>
-  <strong>Volumn:</strong>
-  <%= @product.volumn %>
-</p>
-
-<p>
-  <strong>Quantity:</strong>
-  <%= @product.quantity %>
-</p>
-
-<p>
-  <strong>Cost:</strong>
-  <%= @product.cost %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
-  <strong>Sell date:</strong>
-  <%= @product.sell_date %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <tr>
+    <td>
+      <strong>Name:</strong>
+    </td>
+    <td>
+      <%= @product.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Details:</strong>
+      </td>
+     <td> <%= @product.details %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Volumn:</strong>
+    </td>
+    <td>
+      <%= @product.volumn %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Quantity:</strong>
+    </td>
+    <% if @product.quantity == 0 %>
+    <td class="negative">
+      None
+    </td>
+      <% else %>
+    <td>
+      <%= @product.quantity %>
+    </td>
+      <% end %>
+  </tr>
+  <tr>
+    <td>
+      <strong>Cost:</strong>
+    </td>
+    <td>
+      <%= @product.cost %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Price:</strong>
+    </td>
+    <td>
+      <%= @product.price %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Sell date:</strong>
+    </td>
+    <td>
+      <%= @product.sell_date %>
+    </td>
+  </tr>
+</table>
+<%= link_to 'Edit', edit_product_path(@product), class: "ui yellow button" %> |
+<%= link_to 'Back', products_path, class: "ui green button" %>

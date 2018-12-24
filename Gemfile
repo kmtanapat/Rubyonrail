@@ -19,7 +19,9 @@ gem 'semantic-ui-sass'
 gem 'bcrypt', '~> 3.1.7'
 gem 'cancancan', '~> 2.0'
 gem 'jquery-rails'
-
+gem 'bootstrap'
+gem 'momentjs-rails'
+gem 'bootstrap-datetimepicker-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

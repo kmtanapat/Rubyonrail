@@ -1,12 +1,20 @@
 <%= render 'layouts/header' %>
 <h1>Details</h1>
-<p>
+<table class="ui celled green table">
+
+<tr>
+  <td>
   <strong>ID:</strong>
-  <%= @user.user_name %>
-</p>
-<p>
-  <strong>roles:</strong>
-  <%= @user.roles %>
-</p>
+  </td>
+  <td>
+  <%= @user.user_name %></td>
+</tr>
+<tr>
+  <td>
+  <strong>roles:</strong></td>
+  <td>
+  <%= @user.roles %></td>
+</tr>
+</table>
 <%= link_to 'Edit', edit_user_path(@user),class: "ui yellow button" %> |
 <%= link_to 'Back', users_path ,class: "ui green button"%>

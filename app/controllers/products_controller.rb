@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+before_action :req
   # GET /products
   # GET /products.json
   def index
@@ -71,4 +71,9 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :details, :volumn, :quantity, :cost, :price, :sell_date)
     end
+  def req
+    unless current_user
+      redirect_to login_path
+    end
+  end
 end
