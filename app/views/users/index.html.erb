@@ -1,6 +1,7 @@
 <%= render 'layouts/header' %>
 
 <h1>Users</h1>
+<%# if current_user.roles == 'user' %>
 <%= link_to 'New User', new_user_path, class: "ui primary button" %>
 <table class="ui celled green table ">
 

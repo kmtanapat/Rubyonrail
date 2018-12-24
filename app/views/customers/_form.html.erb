@@ -10,59 +10,62 @@
       </ul>
     </div>
   <% end %>
-<div class="ui grid">
-  <div class="field">
+
+  <div class="wide column">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+<div class="ui grid">
+  <div class="four wide column">
     <%= form.label :house_num %>
     <%= form.text_field :house_num %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :build %>
     <%= form.text_field :build %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :group %>
     <%= form.text_field :group %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :road %>
     <%= form.text_field :road %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :district %>
     <%= form.text_field :district %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :township %>
     <%= form.text_field :township %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :city %>
     <%= form.text_field :city %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :mail %>
     <%= form.number_field :mail %>
   </div>
 
-  <div class="field">
+  <div class="four wide column">
     <%= form.label :tel %>
-    <%= form.number_field :tel %>
+    <%= form.telephone_field :tel %>
   </div>
 
+
+  </div>
+  <br>
   <div class="actions">
-    <%= form.submit "Create Customer data",class:"ui primary button"%>
-  </div>
-  </div>
+  <%= form.submit "Create Customer data",class:"ui primary button"%>
+</div>
 <% end %>
