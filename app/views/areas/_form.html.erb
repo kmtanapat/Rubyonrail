@@ -1,0 +1,13 @@
+<%= form_with(model: [ @user, @user.comments.build ], class:"ui form", local: true) do |form| %>
+  <p>
+    <strong><%= form.label :district %></strong><br>
+    <%= form.text_field :district %>
+  </p>
+  <p>
+    <strong><%= form.label :province %></strong><br>
+    <%= form.text_area :province %>
+  </p>
+  <p>
+    <%= form.submit 'Create Province',class:"ui primary button" %>
+  </p>
+<% end %>

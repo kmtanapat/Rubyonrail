@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+  resources :users do
+    resources :areas
+  end
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
