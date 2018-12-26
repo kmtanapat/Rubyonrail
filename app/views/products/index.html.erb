@@ -7,6 +7,7 @@
     <tr>
       <% if current_user.roles == 'admin' %>
         <th colspan="3"></th>
+        <th>Have?</th>
         <th>Name</th>
         <th>Details</th>
         <th>Volumn</th>
@@ -18,7 +19,7 @@
         <th>Updated date</th>
     <% else %>
         <th colspan="1"></th>
-
+      <th>Have?</th>
       <th>Name</th>
       <th>Details</th>
       <th>Volumn</th>
@@ -38,6 +39,11 @@
       <td class="InwzaTD"><%= link_to 'Show', product ,class: "ui green button"%></td>
         <td class="InwzaTD"><%= link_to 'Edit', edit_product_path(product) ,class: "ui yellow button"%></td>
         <td class="InwzaTD"> <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } ,class: "ui red button"%></td>
+        <% if product.quantity == 0 %>
+          <td class="center aligned"><i class="red circle icon"></i></td>
+        <% else %>
+          <td class="center aligned"><i class="blue circle icon"></i></td>
+        <%end %>
         <td><%= product.name %></td>
         <td><%= product.details %></td>
         <td><%= product.volumn %></td>
@@ -55,6 +61,11 @@
         <% else %>
     <tr>
       <td class="InwzaTD"><%= link_to 'Show', product ,class: "ui green button"%></td>
+      <% if product.quantity == 0 %>
+        <td class="center aligned"><i class="red circle icon"></i></td>
+      <% else %>
+        <td class="center aligned"><i class="blue circle icon"></i></td>
+      <%end %>
       <td><%= product.name %></td>
       <td><%= product.details %></td>
       <td><%= product.volumn %></td>
