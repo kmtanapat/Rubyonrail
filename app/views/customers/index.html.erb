@@ -17,6 +17,8 @@
       <th>City</th>
       <th>Mail</th>
       <th>Tel</th>
+      <th>Created</th>
+      <th>Updated</th>
 
     </tr>
   </thead>
@@ -24,9 +26,9 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= link_to 'Show', customer ,class: "ui green button"%></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) ,class: "ui yellow button"%></td>
-        <td><%= link_to 'Delete', customer, method: :delete, data: { confirm: 'Are you sure?' },class: "ui red button" %></td>
+        <td class="InwzaTD"><%= link_to 'Show', customer ,class: "ui green button"%></td>
+        <td class="InwzaTD"><%= link_to 'Edit', edit_customer_path(customer) ,class: "ui yellow button"%></td>
+        <td class="InwzaTD"><%= link_to 'Delete', customer, method: :delete, data: { confirm: 'Are you sure?' },class: "ui red button" %></td>
         <td><%= customer.name %></td>
         <td><%= customer.house_num %></td>
         <td><%= customer.build %></td>
@@ -37,6 +39,9 @@
         <td><%= customer.city %></td>
         <td><%= customer.mail %></td>
         <td><%= customer.tel %></td>
+        <td><%= customer.created_at %></td>
+        <td><%= customer.updated_at %></td>
+
       </tr>
     <% end %>
   </tbody>

@@ -16,5 +16,8 @@
   <%= @user.roles %></td>
 </tr>
 </table>
+<%= render @user.areas %>
+<%= render 'areas/form' %>
+
 <%= link_to 'Edit', edit_user_path(@user),class: "ui yellow button" %> |
 <%= link_to 'Back', users_path ,class: "ui green button"%>

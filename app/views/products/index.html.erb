@@ -14,7 +14,9 @@
         <th>Cost</th>
         <th>Price</th>
         <th>Sell date</th>
-      <% else %>
+        <th>Created date</th>
+        <th>Updated date</th>
+    <% else %>
         <th colspan="1"></th>
 
       <th>Name</th>
@@ -22,6 +24,8 @@
       <th>Volumn</th>
       <th>Price</th>
       <th>Sell date</th>
+      <th>Created date</th>
+      <th>Updated date</th>
       <% end %>
     </tr>
   </thead>
@@ -45,6 +49,8 @@
         <td><%= product.cost %></td>
         <td><%= product.price %></td>
         <td><%= product.sell_date %></td>
+        <td><%= product.created_at %></td>
+        <td><%= product.updated_at %></td>
       </tr>
         <% else %>
     <tr>
@@ -54,6 +60,8 @@
       <td><%= product.volumn %></td>
       <td><%= product.price %></td>
       <td><%= product.sell_date %></td>
+      <td><%= product.created_at %></td>
+      <td><%= product.updated_at %></td>
     </tr>
   <%end %>
         <% end %>
