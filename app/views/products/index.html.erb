@@ -2,7 +2,7 @@
 
 <h1>Products</h1>
 <%= link_to 'New Product', new_product_path, class: "ui primary button" %>
-<table class="ui celled green table ">
+<table class="ui celled green unstackable table">
   <thead>
     <tr>
       <% if current_user.roles == 'admin' %>
@@ -54,7 +54,7 @@
           <% end %>
         <td><%= product.cost %></td>
         <td><%= product.price %></td>
-        <td><%= product.sell_date %></td>
+        <td><%= product.sell_date.to_s(:long) %></td>
         <td><%= product.created_at %></td>
         <td><%= product.updated_at %></td>
       </tr>
@@ -70,7 +70,7 @@
       <td><%= product.details %></td>
       <td><%= product.volumn %></td>
       <td><%= product.price %></td>
-      <td><%= product.sell_date %></td>
+      <td><%= product.sell_date.to_s(:long) %></td>
       <td><%= product.created_at %></td>
       <td><%= product.updated_at %></td>
     </tr>

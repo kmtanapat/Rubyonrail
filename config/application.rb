@@ -17,5 +17,6 @@ module Blog
     # the framework and any gems in your application.
     config.time_zone = 'Bangkok'
     Time::DATE_FORMATS[:default] = '%a, %d %b %Y %H:%M:%S'
+    Time::Date
   end
 end

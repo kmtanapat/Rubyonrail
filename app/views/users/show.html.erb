@@ -1,22 +1,23 @@
 <%= render 'layouts/header' %>
 <h1>Details</h1>
 <table class="ui celled green table">
-
-<tr>
-  <td>
-  <strong>ID:</strong>
+  <thead>
+<th><strong>ID:</strong></th>
+  <th><strong>roles:</strong></th>
+  </thead>
+  <td class="RowZa">
+  <%= @user.user_name %>
   </td>
   <td>
-  <%= @user.user_name %></td>
-</tr>
-<tr>
-  <td>
-  <strong>roles:</strong></td>
-  <td>
   <%= @user.roles %></td>
-</tr>
 </table>
+<table class="ui celled blue table">
+  <thead>
+  <th><strong>District :</strong></th>
+  <th><strong>Province :</strong></th>
+  </thead>
 <%= render @user.areas %>
+</table>
 <%= render 'areas/form' %>
 
 <%= link_to 'Edit', edit_user_path(@user),class: "ui yellow button" %> |

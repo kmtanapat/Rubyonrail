@@ -43,14 +43,13 @@
 
   <div class="field">
     <%= form.label :sell_date %>
-    <%= form.date_field :sell_date, :id => "datepicker" %>
+    <%= form.text_field :sell_date, class: "form-control datepicker"  %>
   </div>
   <div class="field">
     <%= form.label :details %>
-    <%= form.text_area :details ,class:"ui calendar"%>
+    <%= form.text_area :details%>
   </div>
   <br>
-
   <div class="actions">
     <%= form.submit "Create Product ", class:"ui primary button"%>
   </div>
@@ -58,5 +57,8 @@
 <% end %>
 
 <script>
-    $('#datepicker').datepicker({format: 'dd/mm/yyyy'});
+  $(document).ready(function () {
+      $('.datepicker').pickadate() ;
+  });
+
 </script>
