@@ -1,0 +1,57 @@
+<%= render 'layouts/header' %>
+
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>House num:</strong>
+  <%= @customer.house_num %>
+</p>
+
+<p>
+  <strong>Build:</strong>
+  <%= @customer.build %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @customer.group %>
+</p>
+
+<p>
+  <strong>Road:</strong>
+  <%= @customer.road %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @customer.district %>
+</p>
+
+<p>
+  <strong>Township:</strong>
+  <%= @customer.township %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @customer.city %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @customer.mail %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @customer.tel %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer),class: "ui yellow button" %> |
+<%= link_to 'Back', customers_path ,class: "ui green button"%>

@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
+  resources :customers
   resources :products
   root 'welcome#index'
   resources :articles do
     resources :comments
+  end
+  resources :users do
+    resources :areas
   end
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'

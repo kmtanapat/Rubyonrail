@@ -16,7 +16,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require pickadate/picker
+//= require pickadate/picker.date
 //= require_tree .
-$(function(){
-    $('.ui.dropdown').dropdown();
-})
+$('.datepicker').pickadate()
+

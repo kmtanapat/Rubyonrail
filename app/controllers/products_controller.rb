@@ -5,6 +5,7 @@ before_action :req
   # GET /products.json
   def index
     @products = Product.all
+
   end
 
   # GET /products/1

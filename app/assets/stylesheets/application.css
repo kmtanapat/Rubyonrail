@@ -12,12 +12,19 @@
  *
  *= require_tree .
  *= require_self
+*= require pickadate/default
+*= require pickadate/default.date
  */
 @import "semantic-ui";
+head{
+    height: 100%;
+    width: fit-content;
+}
 body{
-    background-color: #ebebe0
-;
-
+    background-color: #ebebe0;
+    height: 100%;
+    /*min-width: 100vw;*/
+    overflow: scroll;
 }
 footer{
     top: 90%;
@@ -37,4 +44,7 @@ td.InwzaTD{
 }
 th.HeaderZa{
     background-color: cornflowerblue;
+}
+td.RowZa{
+    width: 850px;
 }
