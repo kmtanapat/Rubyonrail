@@ -11,6 +11,7 @@ class CreateCustomers < ActiveRecord::Migration[5.2]
       t.string :city
       t.integer :mail
       t.integer :tel
+      t.integer :image
 
       t.timestamps
     end
