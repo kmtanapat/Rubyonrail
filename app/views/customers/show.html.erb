@@ -52,6 +52,9 @@
   <strong>Tel:</strong>
   <%= @customer.tel %>
 </p>
-
+<br>
+<%= image_tag(@customer.image_url) %>
+<br>
+<br>
 <%= link_to 'Edit', edit_customer_path(@customer),class: "ui yellow button" %> |
 <%= link_to 'Back', customers_path ,class: "ui green button"%>
