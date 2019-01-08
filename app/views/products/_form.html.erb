@@ -21,22 +21,39 @@
 
     <div class="four wide column">
       <%= form.label :volumn %>
+      <div class="ui right labeled input">
       <%= form.number_field :volumn %>
+        <div class="ui basic label">
+          Ml
+        </div>
+      </div>
     </div>
 
     <div class="four wide column">
       <%= form.label :quantity %>
+        <div class="ui right labeled input">
       <%= form.number_field :quantity %>
+          <div class="ui basic label">
+            pc
+          </div>
+        </div>
     </div>
-
     <div class="four wide column">
       <%= form.label :cost %>
+      <div class="ui right labeled input">
+        <label for="amount" class="ui label">$</label>
       <%= form.number_field :cost %>
+        <div class="ui basic label">.00</div>
+      </div>
     </div>
 
     <div class="four wide column">
       <%= form.label :price %>
+        <div class="ui right labeled input">
+          <label for="amount" class="ui label">$</label>
       <%= form.number_field :price %>
+        <div class="ui basic label">.00</div>
+      </div>
     </div>
 
   </div>

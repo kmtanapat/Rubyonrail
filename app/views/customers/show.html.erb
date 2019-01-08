@@ -1,59 +1,65 @@
 <%= render 'layouts/header' %>
 
-<p id="notice"><%= notice %></p>
+<!--<td id="notice"><%#= notice %></td>-->
+<h1>Details</h1>
+<table class="ui celled green table">
+  <thead>
+  <th > <strong>Name:</strong>  </th>
+  <th>  <strong>House num:</strong></th>
+  <th>  <strong>Build:</strong></th>
+  <th>  <strong>Group:</strong></th>
+  <th>  <strong>Road:</strong></th>
+  <th>  <strong>District:</strong></th>
+  <th>  <strong>Township:</strong></th>
+  <th>  <strong>City</strong></th>
+  <th>  <strong>Mail:</strong></th>
+  <th>  <strong>Tel:</strong></th>
 
+  </thead>
 
-<p>
-  <strong>Name:</strong>
+<td>
   <%= @customer.name %>
-</p>
+</td>
 
-<p>
-  <strong>House num:</strong>
+<td>
   <%= @customer.house_num %>
-</p>
+</td>
 
-<p>
-  <strong>Build:</strong>
+<td>
   <%= @customer.build %>
-</p>
+</td>
 
-<p>
-  <strong>Group:</strong>
+<td>
   <%= @customer.group %>
-</p>
+</td>
 
-<p>
-  <strong>Road:</strong>
+<td>
   <%= @customer.road %>
-</p>
+</td>
 
-<p>
-  <strong>District:</strong>
+<td>
   <%= @customer.district %>
-</p>
+</td>
 
-<p>
-  <strong>Township:</strong>
+<td>
   <%= @customer.township %>
-</p>
+</td>
 
-<p>
-  <strong>City:</strong>
+<td>
   <%= @customer.city %>
-</p>
+</td>
 
-<p>
-  <strong>Mail:</strong>
+<td>
+
   <%= @customer.mail %>
-</p>
+</td>
 
-<p>
-  <strong>Tel:</strong>
+<td>
   <%= @customer.tel %>
-</p>
+</td>
+</table>
 <br>
-<%= image_tag(@customer.image_url) %>
+<%= image_tag(@customer.image_url.to_s,class: "image-size") %>
 <br>
 <br>
 <%= link_to 'Edit', edit_customer_path(@customer),class: "ui yellow button" %> |

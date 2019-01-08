@@ -61,12 +61,14 @@
     <%= form.label :tel %>
     <%= form.telephone_field :tel %>
   </div>
-  <div class="field">
-    add an image....
-    <%= form.file_field :image %>
-  </div>
+  <br>
+
 
   </div>
+  <div class="four wide column">
+  <%= form.label :upload %>
+  <%= form.file_field :image ,class:"ui input focus" %>
+    </div>
   <br>
   <div class="actions">
   <%= form.submit "Create Customer data",class:"ui primary button"%>
