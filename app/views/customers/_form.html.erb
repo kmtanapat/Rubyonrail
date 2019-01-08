@@ -67,7 +67,13 @@
   </div>
   <div class="four wide column">
   <%= form.label :upload %>
-  <%= form.file_field :image ,class:"ui input focus" %>
+    <span class="btn btn-default btn-file">
+    <%= form.file_field :image ,class:"ui input focus",id:"avatar-upload" %>
+  </span>
+    <br>
+    <br>
+    <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"  style="max-height: 1080px;max-width: 720px;"/> <br/>
+    <%= form.hidden_field :avatar_cache %>
     </div>
   <br>
   <div class="actions">
