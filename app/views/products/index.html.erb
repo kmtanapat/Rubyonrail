@@ -2,11 +2,12 @@
 
 <h1>Products</h1>
 <%= link_to 'New Product', new_product_path, class: "ui primary button" %>
-<table class="ui celled green table ">
+<table class="ui celled green unstackable table">
   <thead>
     <tr>
       <% if current_user.roles == 'admin' %>
         <th colspan="3"></th>
+        <th>Have?</th>
         <th>Name</th>
         <th>Details</th>
         <th>Volumn</th>
@@ -14,14 +15,18 @@
         <th>Cost</th>
         <th>Price</th>
         <th>Sell date</th>
-      <% else %>
+        <th>Created date</th>
+        <th>Updated date</th>
+    <% else %>
         <th colspan="1"></th>
-
+      <th>Have?</th>
       <th>Name</th>
       <th>Details</th>
       <th>Volumn</th>
       <th>Price</th>
       <th>Sell date</th>
+      <th>Created date</th>
+      <th>Updated date</th>
       <% end %>
     </tr>
   </thead>
@@ -34,6 +39,11 @@
       <td class="InwzaTD"><%= link_to 'Show', product ,class: "ui green button"%></td>
         <td class="InwzaTD"><%= link_to 'Edit', edit_product_path(product) ,class: "ui yellow button"%></td>
         <td class="InwzaTD"> <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } ,class: "ui red button"%></td>
+        <% if product.quantity == 0 %>
+          <td class="center aligned"><i class="red circle icon"></i></td>
+        <% else %>
+          <td class="center aligned"><i class="blue circle icon"></i></td>
+        <%end %>
         <td><%= product.name %></td>
         <td><%= product.details %></td>
         <td><%= product.volumn %></td>
@@ -44,16 +54,25 @@
           <% end %>
         <td><%= product.cost %></td>
         <td><%= product.price %></td>
-        <td><%= product.sell_date %></td>
+        <td><%= product.sell_date.to_s(:long) %></td>
+        <td><%= product.created_at %></td>
+        <td><%= product.updated_at %></td>
       </tr>
         <% else %>
     <tr>
       <td class="InwzaTD"><%= link_to 'Show', product ,class: "ui green button"%></td>
+      <% if product.quantity == 0 %>
+        <td class="center aligned"><i class="red circle icon"></i></td>
+      <% else %>
+        <td class="center aligned"><i class="blue circle icon"></i></td>
+      <%end %>
       <td><%= product.name %></td>
       <td><%= product.details %></td>
       <td><%= product.volumn %></td>
       <td><%= product.price %></td>
-      <td><%= product.sell_date %></td>
+      <td><%= product.sell_date.to_s(:long) %></td>
+      <td><%= product.created_at %></td>
+      <td><%= product.updated_at %></td>
     </tr>
   <%end %>
         <% end %>

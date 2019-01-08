@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :cost
       t.integer :price
       t.date :sell_date
-
+      t.date :last_update
       t.timestamps
     end
   end
