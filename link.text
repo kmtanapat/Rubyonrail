@@ -3,3 +3,4 @@ https://edgeguides.rubyonrails.org/association_basics.html  ***Association
 http://railscasts.com/episodes/240-search-sort-paginate-with-ajax  ***Search, Sort, Paginate with AJAX
 http://railscasts.com/episodes/111-advanced-search-form/  ***Advanced Search Form
 https://medium.com/@mauddev/rails-5-and-carrierwave-53960ec20c4b ***image uploads
+https://www.spencerdixon.com/blog/image-preview-with-carrierwave-and-rails.html ***preview uploader image
