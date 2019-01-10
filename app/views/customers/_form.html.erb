@@ -68,11 +68,11 @@
   <div class="four wide column">
   <%= form.label :upload %>
     <span class="btn btn-default btn-file">
-    <%= form.file_field :image ,class:"ui input focus",id:"avatar-upload" %>
+    <%= form.file_field :image ,class:"ui input focus",id:"avatar-upload" , onchange: "validateFiles(this);"%>
   </span>
     <br>
     <br>
-    <img id="img_prev" src="#" alt="your image" class="img-thumbnail hidden"  style="max-height: 1080px;max-width: 720px;"/> <br/>
+    <img id="img_prev" src="#" alt="your image" class="image-size"  style="max-height: 1080px;max-width: 720px;"/> <br/>
     <%= form.hidden_field :avatar_cache %>
     </div>
   <br>
@@ -80,3 +80,22 @@
   <%= form.submit "Create Customer data",class:"ui primary button"%>
 </div>
 <% end %>
+<script>
+    $(function() {
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img_prev').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $("#avatar-upload").change(function(){
+            $('#img_prev').removeClass('hidden');
+            readURL(this);
+        });
+    });
+</script>
