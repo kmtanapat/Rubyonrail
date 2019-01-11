@@ -5,9 +5,12 @@ before_action :req
   # GET /products.json
   def index
     @products = Product.all
-
-  end
-
+    respond_to do |format|
+      format.html
+      format.csv { send_data @products.to_csv }
+      format.xls
+    end
+end
   # GET /products/1
   # GET /products/1.json
   def show
