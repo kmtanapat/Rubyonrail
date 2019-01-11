@@ -25,7 +25,7 @@ gem 'bootstrap-datetimepicker-rails'
 gem 'pickadate-rails'
 gem 'carrierwave'
 gem "google-cloud-storage", "~> 1.8", require: false
-gem 'will_paginate', '3.0.pre2'
+gem 'will_paginate', '>= 3.1'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
