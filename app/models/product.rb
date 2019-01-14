@@ -1,11 +1,10 @@
 class Product < ApplicationRecord
   require 'csv'
-
-  def self.to_csv(column_names, products, options = {})
+  def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names
-      products.each do |product|
-        csv << product.column_values
+      all.each do |product|
+        csv << product.attributes.values
       end
     end
   end
