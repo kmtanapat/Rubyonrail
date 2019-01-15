@@ -1,5 +1,14 @@
 <%= render 'layouts/header' %>
-
+<div class="ui input icon focus" id="products-search">
+  <i class="search icon"></i>
+  <input type="text" id="products-search-txt" autofocus>
+  <div class="results" id="products-search-results"></div>
+</div>
+<script>
+    $(function() {
+        new app.Products;
+    });
+</script>
 <h1>Products</h1>
 <%= link_to 'New Product', new_product_path, class: "ui primary button" %>
 <table class="ui celled green unstackable table">

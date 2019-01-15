@@ -9,6 +9,8 @@ before_action :req
       format.html
       format.csv { send_data @products.to_csv }
       format.xls
+      format.json { @products = @products.search(params[:term]) }
+
     end
 end
   # GET /products/1
