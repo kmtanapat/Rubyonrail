@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_08_085812) do
+ActiveRecord::Schema.define(version: 2019_01_17_083154) do
 
   create_table "areas", force: :cascade do |t|
     t.string "district"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(version: 2019_01_08_085812) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.decimal "amount", precision: 15, scale: 2, default: "0.0"
+    t.string "company"
+    t.string "contragent"
+    t.string "currency"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: :cascade do |t|

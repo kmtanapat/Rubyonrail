@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :invoices
   resources :customers
   resources :products
   root 'welcome#index'
