@@ -8,6 +8,16 @@
 def up
   # User.create(user_name: 'tanapat' ,email: 'test@test.local', password_digest: '1234', roles: 'admin')
   Product.create([{name: 'p'},{details: 'deaa'},{volumn: 5},{quantity:10},{cost:300},{price:400},{sell_date:'2018-12-25'}])
+  line_items = LineItem.create([
+                                   { description: 'Tuts+ Subscription April 2016', price: 15.0 },
+                                   { description: 'Ruby eBook', price: 9.90} ])
+  Invoice.create(
+      company: 'Pedro',
+      amount: 24.90,
+      line_items: line_items,
+      contragent: 'true',
+      currency: 'baht',
+      date: Date.new(2016, 4, 1))
 end
 def down
 end

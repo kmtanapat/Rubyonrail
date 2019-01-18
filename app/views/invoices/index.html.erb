@@ -1,3 +1,4 @@
+<%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
 
 <h1>Invoices</h1>
@@ -23,10 +24,10 @@
         <td><%= invoice.company %></td>
         <td><%= invoice.contragent %></td>
         <td><%= invoice.currency %></td>
-        <td><%= invoice.date %></td>
+        <td><%= invoice.date.strftime("%B %d, %Y") %></td>
         <td><%= link_to 'Show', invoice %></td>
-        <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-        <td><%= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<!--        <td><%#= link_to 'Edit', edit_invoice_path(invoice) %></td>-->
+<!--        <td><%#= link_to 'Destroy', invoice, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +35,4 @@
 
 <br>
 
-<%= link_to 'New Invoice', new_invoice_path %>
+<%#= link_to 'New Invoice', new_invoice_path %>

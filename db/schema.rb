@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_17_083154) do
+ActiveRecord::Schema.define(version: 2019_01_17_105219) do
 
   create_table "areas", force: :cascade do |t|
     t.string "district"
@@ -37,6 +37,13 @@ ActiveRecord::Schema.define(version: 2019_01_17_083154) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
+  create_table "commons", force: :cascade do |t|
+    t.integer "customer_id"
+    t.integer "product_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.string "house_num"
@@ -61,6 +68,15 @@ ActiveRecord::Schema.define(version: 2019_01_17_083154) do
     t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.string "description"
+    t.float "price"
+    t.integer "invoice_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["invoice_id"], name: "index_line_items_on_invoice_id"
   end
 
   create_table "products", force: :cascade do |t|

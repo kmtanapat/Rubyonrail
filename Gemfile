@@ -27,7 +27,10 @@ gem 'pickadate-rails'
 gem 'carrierwave'
 gem "google-cloud-storage", "~> 1.8", require: false
 gem 'will_paginate', '>= 3.1'
-
+gem 'invoicing'
+gem 'pdfkit'
+gem 'render_anywhere'
+gem 'wkhtmltopdf-binary'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
