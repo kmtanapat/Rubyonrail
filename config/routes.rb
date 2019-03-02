@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :invoices, only:[:index,:show]
+  resources :invoices
   resources :customers
   resources :products
   root 'welcome#index'
