@@ -39,22 +39,22 @@
 
   <div class="four wide column">
     <%= form.label :district %>
-    <%= form.text_field :district %>
+    <%= form.text_field :district,id:"district" %>
   </div>
 
   <div class="four wide column">
     <%= form.label :township %>
-    <%= form.text_field :township %>
+    <%= form.text_field :township,id:"amphoe" %>
   </div>
 
   <div class="four wide column">
     <%= form.label :city %>
-    <%= form.text_field :city %>
+    <%= form.text_field :city,id:"province" %>
   </div>
 
   <div class="four wide column">
     <%= form.label :mail %>
-    <%= form.number_field :mail %>
+    <%= form.number_field :mail,id:"zipcode" %>
   </div>
 
   <div class="four wide column">
@@ -80,6 +80,7 @@
   <%= form.submit "Create Customer data",class:"ui primary button"%>
 </div>
 <% end %>
+
 <script>
     $(function() {
         function readURL(input) {
@@ -97,5 +98,12 @@
             $('#img_prev').removeClass('hidden');
             readURL(this);
         });
+        $.Thailand({
+            $district: $('#district'), // input ของตำบล
+            $amphoe: $('#amphoe'), // input ของอำเภอ
+            $province: $('#province'), // input ของจังหวัด
+            $zipcode: $('#zipcode'), // input ของรหัสไปรษณีย์
+        });
+
     });
 </script>

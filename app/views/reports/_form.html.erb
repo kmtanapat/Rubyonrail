@@ -1,0 +1,71 @@
+<%= form_with(model: report, local: true,class: "ui form") do |form| %>
+  <% if report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(report.errors.count, "error") %> prohibited this report from being saved:</h2>
+
+      <ul>
+      <% report.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <!--// customer-->
+  <div class="ui grid">
+  <div class="row">
+    <div class="eight wide column">
+    <%= form.label :customer_id %>
+    <%= form.text_field :customer_id %>
+    </div>
+    <div class="eight wide column">
+      <%= form.label :business %>
+      <%= form.text_field :business %>
+    </div>
+  </div>
+<!--// fatory-->
+  <div class="row">
+  <div class="wide column">
+    <%= form.label :factory_id %>
+    <%= form.text_field :factory_id %>
+  </div>
+  </div>
+
+    <div class="row">
+      <div class="wide column">
+        <%= form.label :company_id %>
+        <%= form.text_field :company_id %>
+      </div>
+    </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :howto %>
+    <%= form.text_field :howto %>
+  </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_at %>
+    <%= form.text_field :time_at, class: "form-control datepicker" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_id %>
+    <%= form.text_field :product_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :submit, class: ""%>
+  </div>
+
+<% end %>
+<script>
+    $(document).ready(function () {
+        $('.datepicker').pickadate() ;
+    });
+
+</script>

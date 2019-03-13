@@ -6,7 +6,12 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.page(params[:page])
+    @search = params["search"]
+    if @search.present?
+      @name = @search["user_name"]
+      @users = User.where("user_name ILIKE ?", "%#{@name}%")
+    end
   end
 
   # GET /users/1
@@ -22,7 +27,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
-
   # POST /users
   # POST /users.json
   def create

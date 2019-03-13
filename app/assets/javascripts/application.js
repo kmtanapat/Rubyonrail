@@ -19,6 +19,9 @@
 //= require turbolinks
 //= require pickadate/picker
 //= require pickadate/picker.date
+//= require bootstrap
+//= require Chart.bundle
+//= require chartkick
 //= require_tree .
 $('.datepicker').pickadate()
 var app = window.app={};
